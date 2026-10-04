@@ -19,6 +19,7 @@
     --gnc:#0C8F8F;
     --tiendas:#C2196B;
     --boxes:#6A3EBF;
+    --especiales:#B8860B;
   }
   *{box-sizing:border-box;}
   html,body{margin:0;padding:0;}
@@ -128,6 +129,7 @@
   .cat-btn.active[data-cat="GNC"]{background:var(--gnc);}
   .cat-btn.active[data-cat="Tiendas"]{background:var(--tiendas);}
   .cat-btn.active[data-cat="Boxes"]{background:var(--boxes);}
+  .cat-btn.active[data-cat="Especiales"]{background:var(--especiales);}
 
   main{
     max-width:640px;
@@ -166,6 +168,7 @@
   .card.cat-GNC{border-left-color:var(--gnc);}
   .card.cat-Tiendas{border-left-color:var(--tiendas);}
   .card.cat-Boxes{border-left-color:var(--boxes);}
+  .card.cat-Especiales{border-left-color:var(--especiales);}
 
   .pct{
     flex:0 0 auto;
@@ -180,6 +183,7 @@
   .card.cat-GNC .pct{color:var(--gnc);}
   .card.cat-Tiendas .pct{color:var(--tiendas);}
   .card.cat-Boxes .pct{color:var(--boxes);}
+  .card.cat-Especiales .pct{color:var(--especiales);}
   .pct .sub{
     display:block;
     font-size:9px;
@@ -278,7 +282,7 @@
 const SHEET_API_URL = "https://script.google.com/macros/s/AKfycbxqNydc6fsfwzTD9_Y8JWfHsn7q3S2sz3k35_XVCVGUZgjISYwrrLVWPkcYFKi3YscdIA/exec";
 
 const DIAS = ["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"];
-const CATEGORIAS = ["Todas","Combustibles","GNC","Tiendas","Boxes"];
+const CATEGORIAS = ["Todas","Combustibles","GNC","Tiendas","Boxes","Especiales"];
 
 let allPromos = [];
 let selectedDay = DIAS[(new Date().getDay() + 6) % 7]; // getDay(): 0=domingo
